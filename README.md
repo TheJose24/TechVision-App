@@ -90,6 +90,17 @@ Los mensajes de commit deben seguir el siguiente formato
 - **chore:** Cambios menores que no afectan el código de la aplicación.
 - **revert:** Revertir un commit anterior.
 
+#### Tipos de alcance disponibles:
+- **ui** Cambios en la interfaz de usuario
+- **reports** Cambios en los informes
+- **projects** Cambios en los proyectos
+- **clients** Cambios en los clientes
+- **team** Cambios en el codigo
+- **auth** Cambios en la autenticacion
+- **api** Cambios en la API
+- **config** Configuracion de la aplicacion
+- **test** Pruebas unitarias o de integracion
+
 Ejemplos:
 
 ```plaintext
@@ -119,7 +130,10 @@ npm run lint
 
 ```bash
 git add .
-git commit -m "feat(ui): agregar formulario de contacto"
+git commit -m "feat(ui): agregar formulario de contacto
+
+- Se agrego el componente para el formulario de contacto
+- Se agrego animaciones al formulario"
 ```
 
 5. **Enviar los Cambios:** Cuando todo esté en orden, sube la rama y abre un Pull Request (PR) para revisión.
