@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '../../shared/components/header/header.component';
-import { FooterComponent } from '../../shared/components/footer/footer.component';
-import { ScrollButtonComponent } from '../../shared/components/scroll-button/scroll-button.component';
-import { LoaderComponent } from '../../shared/components/loader/loader.component';
+import { HeaderComponent } from '../shared/components/header/header.component';
+import { FooterComponent } from '../shared/components/footer/footer.component';
+import { ScrollButtonComponent } from '../shared/components/scroll-button/scroll-button.component';
+import { LoaderComponent } from '../shared/components/loader/loader.component';
 
 @Component({
   selector: 'app-layout',
