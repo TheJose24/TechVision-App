@@ -10,13 +10,23 @@ export const routes: Routes = [
   },
 
   {
-    path: 'home',
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: '',
+        path: 'home',
         component: HomeComponent,
       },
+      /*
+      EJEMPLO DE COMO AGREGAR UNA NUEVA RUTA
+      {
+        path: 'agencia',
+        component: AgenciaComponent,
+      },
+      {
+        path: 'app-movil',
+        component: AppMovil,
+      }*/
     ],
   },
 ];
