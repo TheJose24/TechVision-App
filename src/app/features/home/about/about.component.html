@@ -1,0 +1,93 @@
+<section
+  id="about"
+  class="section-area bg-gradient-to-b from-gray-50 to-white py-16 dark:from-gray-900 dark:to-gray-800"
+>
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 gap-14 lg:grid-cols-2">
+      <!-- Image Section -->
+      <div appScrollReveal [scrollRevealConfig]="{ origin: 'top', delay: 200 }" class="w-full">
+        <figure class="group relative mx-auto max-w-[480px]">
+          <img
+            src="/assets/img/about-img.webp"
+            alt="About image"
+            class="rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 rounded-xl bg-primary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          ></div>
+        </figure>
+      </div>
+
+      <!-- Content Section -->
+      <div class="w-full">
+        <div class="space-y-6" appScrollReveal [scrollRevealConfig]="{ origin: 'top', delay: 200 }">
+          <div>
+            <h6
+              class="mb-2 inline-block rounded-full bg-primary/10 px-4 py-1 text-lg font-semibold text-primary"
+            >
+              Sobre nosotros
+            </h6>
+            <h2 class="mb-6 text-3xl font-bold leading-tight">
+              Impulsando la innovación digital con soluciones de software a medida
+            </h2>
+          </div>
+
+          <!-- Tabs Navigation -->
+          <nav class="tabs-nav flex flex-wrap gap-4" role="tablist" aria-label="Sobre Nosotros">
+            <button
+              *ngFor="let tab of tabs"
+              type="button"
+              [id]="'tab-' + tab.id"
+              role="tab"
+              [attr.aria-selected]="isActiveTab(tab.id)"
+              [attr.aria-controls]="'panel-' + tab.id"
+              (click)="setActiveTab(tab.id)"
+              class="tabs-link relative rounded-lg px-6 py-3 font-medium transition-all duration-300"
+              [class.active]="isActiveTab(tab.id)"
+              [ngClass]="{
+                'bg-primary text-white shadow-lg': isActiveTab(tab.id),
+                'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700':
+                  !isActiveTab(tab.id),
+              }"
+            >
+              {{ tab.title }}
+            </button>
+          </nav>
+
+          <!-- Tab Content -->
+          <div class="mt-8">
+            <div
+              *ngFor="let tab of tabs"
+              [@fadeInOut]
+              class="space-y-6"
+              [id]="'panel-' + tab.id"
+              role="tabpanel"
+              [attr.aria-labelledby]="'tab-' + tab.id"
+              [class.hidden]="!isActiveTab(tab.id)"
+            >
+              <div class="space-y-4">
+                <p
+                  *ngFor="let paragraph of tab.content"
+                  class="leading-relaxed text-gray-600 dark:text-gray-300"
+                >
+                  {{ paragraph }}
+                </p>
+              </div>
+
+              <!-- Stats Grid -->
+              <div *ngIf="tab.stats" class="mt-8 grid grid-cols-2 gap-6 md:grid-cols-3">
+                <div
+                  *ngFor="let stat of tab.stats"
+                  class="rounded-lg border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800"
+                >
+                  <div class="mb-1 text-2xl font-bold text-primary">{{ stat.value }}</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">{{ stat.label }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

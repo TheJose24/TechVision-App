@@ -1,0 +1,73 @@
+<section
+  id="clients"
+  class="section-area bg-gradient-to-b from-white to-gray-50 py-20 dark:from-gray-800 dark:to-gray-900"
+>
+  <div class="container mx-auto px-4">
+    <!-- Header Section -->
+    <div
+      class="scroll-revealed mx-auto mb-16 max-w-[700px] text-center"
+      appScrollReveal
+      [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+    >
+      <h6
+        class="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-lg font-semibold text-primary"
+      >
+        Empresas que Confían en Nosotros
+      </h6>
+      <h2 class="mb-6 text-4xl font-bold text-gray-900 dark:text-white">
+        Impulsando la Innovación en Empresas Líderes
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Colaboramos con organizaciones visionarias para transformar sus desafíos tecnológicos en
+        ventajas competitivas sostenibles.
+      </p>
+    </div>
+
+    <!-- Industry Statistics -->
+    <div class="mb-16 grid grid-cols-2 gap-6 md:grid-cols-4">
+      <div
+        *ngFor="let stat of industryStats()"
+        class="scroll-revealed rounded-lg bg-white p-6 text-center shadow-md transition-all duration-300 hover:shadow-lg dark:bg-gray-800"
+        appScrollReveal
+        [scrollRevealConfig]="{ origin: 'bottom', delay: 200 }"
+      >
+        <i [class]="stat.icon + ' mb-4 text-3xl text-primary'"></i>
+        <h3 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">{{ stat.count }}+</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">{{ stat.industry }}</p>
+      </div>
+    </div>
+
+    <!-- Clients Grid -->
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div
+        *ngFor="let client of clients(); let i = index"
+        class="scroll-revealed group relative"
+        appScrollReveal
+        [scrollRevealConfig]="{ origin: 'bottom', delay: 200 + i * 100 }"
+      >
+        <!-- Logo Container -->
+        <div
+          class="flex aspect-video items-center justify-center rounded-lg bg-white p-6 shadow-md transition-all duration-300 group-hover:shadow-lg dark:bg-gray-800"
+        >
+          <img
+            [src]="client.logo"
+            [alt]="client.name + ' Logo'"
+            class="h-12 w-auto transform grayscale transition-all duration-300 hover:scale-110 hover:grayscale-0 dark:brightness-200 dark:contrast-200"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Hover Information -->
+        <div
+          class="absolute left-0 top-0 h-full w-full scale-95 transform rounded-lg bg-primary/95 p-4 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
+        >
+          <div class="flex h-full flex-col justify-center text-center text-white">
+            <h4 class="mb-2 text-lg font-semibold">{{ client.name }}</h4>
+            <p class="mb-2 text-sm">{{ client.description }}</p>
+            <span class="text-xs opacity-75">Cliente desde {{ client.year }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

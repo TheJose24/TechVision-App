@@ -1,0 +1,40 @@
+<section id="intro" class="section-area">
+  <div class="container">
+    <div
+      class="mx-auto mb-12 max-w-[550px] text-center"
+      appScrollReveal
+      [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+    >
+      <h6
+        class="mb-2 inline-block rounded-full bg-primary/10 px-4 py-1 text-lg font-semibold text-primary"
+      >
+        Video de Introducción
+      </h6>
+      <h2 class="mb-6">Conoce Nuestra Propuesta y Valores</h2>
+      <p>
+        Descubre cómo nuestra experiencia y enfoque innovador en consultoría y desarrollo de
+        software pueden transformar tu negocio. Este video te brinda una introducción a nuestra
+        misión, servicios y compromiso con el éxito de nuestros clientes.
+      </p>
+    </div>
+
+    <div
+      class="relative mx-auto max-w-[900px]"
+      appScrollReveal
+      [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+    >
+      <img
+        [src]="thumbnailUrl"
+        [alt]="videoTitle"
+        class="aspect-video h-full w-full rounded-xl object-cover"
+      />
+      <button
+        type="button"
+        class="video-popup absolute left-1/2 top-1/2 inline-flex h-[80px] w-[80px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-[1.875rem] text-primary-color shadow-md transition-all duration-300 hover:bg-primary-color hover:text-primary hover:shadow-xl focus:bg-primary-color focus:text-primary focus:shadow-xl"
+        [attr.href]="videoUrl"
+      >
+        <i class="lni lni-play"></i>
+      </button>
+    </div>
+  </div>
+</section>
