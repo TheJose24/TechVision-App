@@ -1,0 +1,20 @@
+services:
+  techvision-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8087:80"
+    container_name: angular_tech_vision
+    restart: unless-stopped
+    networks:
+      - techvision-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+
+networks:
+  techvision-network:
+    driver: bridge

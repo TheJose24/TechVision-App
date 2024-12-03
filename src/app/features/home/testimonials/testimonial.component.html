@@ -1,0 +1,121 @@
+<section
+  id="testimonials"
+  class="section-area bg-gradient-to-b from-gray-50 to-white py-20 dark:from-gray-900 dark:to-gray-800"
+>
+  <div class="container mx-auto px-4">
+    <!-- Header Section -->
+    <div
+      class="mx-auto mb-16 max-w-[700px] text-center"
+      @fadeInOut
+      appScrollReveal
+      [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+    >
+      <h6
+        class="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-lg font-semibold text-primary"
+      >
+        Testimonios de Clientes
+      </h6>
+      <h2 class="mb-6 text-4xl font-bold text-gray-900 dark:text-white">
+        Experiencias de Éxito en Transformación Digital
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Descubre cómo hemos ayudado a empresas líderes a alcanzar sus objetivos tecnológicos con
+        soluciones innovadoras y personalizadas.
+      </p>
+    </div>
+
+    <!-- Stats Summary -->
+    <div class="mb-12 grid grid-cols-2 gap-6 md:grid-cols-4">
+      <div
+        class="rounded-lg bg-white p-6 text-center shadow-md dark:bg-gray-800"
+        *ngFor="let stat of statistics(); let i = index"
+        appScrollReveal
+        [scrollRevealConfig]="{ delay: 250 + i * 100 }"
+      >
+        <h3 class="mb-2 text-3xl font-bold text-primary">{{ stat.value }}</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300">{{ stat.label }}</p>
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="mb-8 flex flex-wrap justify-center gap-4">
+      <button
+        type="button"
+        *ngFor="let filter of projectFilters; let i = index"
+        appScrollReveal
+        [scrollRevealConfig]="{ delay: 200 + i * 100 }"
+        (click)="setActiveFilter(filter)"
+        [class.bg-primary]="currentFilter() === filter"
+        [class.text-white]="currentFilter() === filter"
+        class="rounded-full border border-gray-200 px-6 py-2 text-sm font-medium transition-colors hover:bg-primary hover:text-white dark:border-gray-700"
+      >
+        {{ filter | titlecase }}
+      </button>
+    </div>
+
+    <!-- Testimonial Carousel -->
+    <swiper-container
+      [init]="true"
+      [navigation]="true"
+      [pagination]="{ clickable: true }"
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [breakpoints]="swiperConfig.breakpoints"
+      class="testimonial-carousel"
+      @slideIn
+    >
+      <swiper-slide *ngFor="let testimonial of filteredTestimonials()">
+        <div
+          class="rounded-xl bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl dark:bg-gray-800"
+        >
+          <!-- Rating Stars -->
+          <div class="mb-4 flex">
+            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+              <svg
+                [class.text-yellow-400]="star <= testimonial.rating"
+                [class.text-gray-300]="star > testimonial.rating"
+                class="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                />
+              </svg>
+            </ng-container>
+          </div>
+
+          <!-- Testimonial Content -->
+          <p class="mb-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            "{{ testimonial.content }}"
+          </p>
+
+          <!-- Author Info -->
+          <div class="flex items-center gap-4">
+            <div class="h-14 w-14 overflow-hidden">
+              <img
+                [src]="testimonial.image"
+                [alt]="testimonial.author"
+                class="h-full w-full rounded-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                {{ testimonial.author }}
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                {{ testimonial.role }} · {{ testimonial.company }}
+              </p>
+            </div>
+
+            <!-- Project Type Badge -->
+            <span class="rounded-full bg-primary/10 px-4 py-1 text-xs font-medium text-primary">
+              {{ testimonial.projectType | titlecase }}
+            </span>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>

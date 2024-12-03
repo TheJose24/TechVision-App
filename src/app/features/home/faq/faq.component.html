@@ -1,0 +1,104 @@
+<section
+  id="faq"
+  class="section-area bg-gradient-to-b from-gray-50 to-white py-20 dark:from-gray-900 dark:to-gray-800"
+>
+  <div class="container mx-auto px-4">
+    <!-- Header Section -->
+    <div
+      class="mx-auto mb-16 max-w-[700px] text-center"
+      appScrollReveal
+      [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+    >
+      <h6
+        class="mb-3 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-lg font-semibold text-primary"
+      >
+        Preguntas Frecuentes
+      </h6>
+      <h2 class="mb-6 text-4xl font-bold dark:text-white">Todo lo que Necesitas Saber</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300">
+        Resolvemos tus dudas sobre nuestros servicios de desarrollo y consultoría tecnológica. Si no
+        encuentras tu respuesta, no dudes en contactarnos.
+      </p>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <div class="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <!-- Search Bar -->
+      <div class="relative flex-1 md:max-w-md">
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          placeholder="Buscar preguntas..."
+          class="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 pl-10 text-gray-700 focus:border-primary focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
+        />
+        <i class="lni lni-search-alt absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap gap-3">
+        <button
+          type="button"
+          *ngFor="let category of categories(); let i = index"
+          appScrollReveal
+          [scrollRevealConfig]="{ delay: 200 + i * 100 }"
+          (click)="setActiveCategory(category.id)"
+          [class.bg-primary]="activeCategory() === category.id"
+          [class.text-white]="activeCategory() === category.id"
+          class="flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium transition-colors hover:bg-primary hover:text-white dark:border-gray-700"
+        >
+          <i [class]="category.icon"></i>
+          {{ category.name }}
+        </button>
+      </div>
+    </div>
+
+    <!-- FAQ Items Grid -->
+    <div class="grid gap-6 md:grid-cols-2">
+      <div
+        *ngFor="let item of filteredFaqs(); let i = index"
+        appScrollReveal
+        [scrollRevealConfig]="{ delay: 200 + i * 100 }"
+        class="rounded-xl bg-white p-6 shadow-lg dark:bg-gray-800"
+      >
+        <!-- Question Header -->
+        <div class="flex w-full items-start gap-4">
+          <div
+            class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"
+          >
+            <i [class]="item.icon"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="mb-4 text-lg font-semibold dark:text-white">
+              {{ item.question }}
+            </h3>
+            <!-- Answer Content -->
+            <div class="text-gray-600 dark:text-gray-300">
+              <p class="leading-relaxed">{{ item.answer }}</p>
+              <!-- Tags -->
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  *ngFor="let tag of item.tags"
+                  class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300"
+                >
+                  {{ tag }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="mt-16 text-center">
+      <p class="mb-6 text-gray-600 dark:text-gray-300">¿No encontraste lo que buscabas?</p>
+      <a
+        [routerLink]="'/contacto'"
+        class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-white transition-transform hover:scale-105"
+      >
+        <i class="lni lni-envelope"></i>
+        Contáctanos
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://tech-vision.devbyjose.studio/</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tech-vision.devbyjose.studio/assets/img/og-image.jpg</image:loc>
+      <image:title>Tech Vision Home</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tech-vision.devbyjose.studio/agencia</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tech-vision.devbyjose.studio/assets/img/about-img.jpg</image:loc>
+      <image:title>Sobre Tech Vision</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tech-vision.devbyjose.studio/app-moviles</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tech-vision.devbyjose.studio/soporte-tecnico</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tech-vision.devbyjose.studio/paginas-web</loc>
+    <lastmod>2024-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
