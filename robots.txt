@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*
+
+# Archivos específicos a no indexar
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Permitir explícitamente el sitemap
+Allow: /sitemap.xml
+
+# Sitemap
+Sitemap: https://tech-vision.devbyjose.studio/sitemap.xml
+
+# Tasa de rastreo
+Crawl-delay: 10

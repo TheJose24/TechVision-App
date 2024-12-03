@@ -1,0 +1,94 @@
+<section id="portfolio" class="section-area px-4 py-16 md:py-24">
+  <div class="container mx-auto">
+    <!-- Header Section -->
+    <div
+      class="mx-auto mb-8 max-w-[550px] px-4 text-center md:mb-12"
+      appScrollReveal
+      [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+    >
+      <h6
+        class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary md:text-lg"
+      >
+        Portafolio
+      </h6>
+      <h2 class="mb-4 text-2xl font-bold md:mb-6 md:text-4xl">Nuestros Proyectos Destacados</h2>
+      <p class="text-sm text-gray-600 md:text-base dark:text-gray-300">
+        Descubre cómo hemos ayudado a empresas a transformar sus desafíos en soluciones digitales
+        exitosas. Nuestra experiencia abarca desde aplicaciones web escalables hasta sistemas
+        empresariales complejos.
+      </p>
+    </div>
+
+    <!-- Filter Buttons - Scrollable en móvil -->
+    <nav class="mb-8 md:mb-12 md:px-0" aria-label="Portfolio filter">
+      <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+        <button
+          *ngFor="let filter of filters; let i = index"
+          appScrollReveal
+          [scrollRevealConfig]="{ delay: 200 + i * 100 }"
+          type="button"
+          [class]="getFilterButtonClass(filter.value)"
+          class="inline-flex items-center rounded-full bg-white px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200 ease-in-out hover:scale-105 hover:transform hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/50 active:scale-95 md:text-base dark:bg-gray-800"
+          (click)="setActiveFilter(filter.value)"
+        >
+          {{ filter.label }}
+        </button>
+      </div>
+    </nav>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
+      <article
+        *ngFor="let project of filteredProjects(); let i = index"
+        appScrollReveal
+        [scrollRevealConfig]="{ delay: 200 + i * 100 }"
+        class="group"
+        [class.hidden]="!showProject(project)"
+      >
+        <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg md:rounded-xl">
+          <img
+            [src]="project.imageUrl"
+            [alt]="project.title"
+            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            loading="lazy"
+          />
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
+          >
+            <div
+              class="absolute bottom-0 left-0 right-0 translate-y-full transform p-4 transition-transform group-hover:translate-y-0"
+            >
+              <div class="flex justify-center gap-2">
+                <a
+                  [href]="project.imageUrl"
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/90 text-white transition-colors hover:bg-primary md:h-12 md:w-12"
+                  aria-label="Ver imagen"
+                >
+                  <i class="lni lni-zoom-in text-lg md:text-xl"></i>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/90 text-white transition-colors hover:bg-primary md:h-12 md:w-12"
+                  aria-label="Ver detalles"
+                >
+                  <i class="lni lni-link text-lg md:text-xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="pt-4">
+          <h4 class="mb-2 text-lg font-semibold transition-colors hover:text-primary md:text-xl">
+            <a href="javascript:void(0)">{{ project.title }}</a>
+          </h4>
+          <p class="text-sm text-gray-600 md:text-base dark:text-gray-300">
+            {{ project.description }}
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

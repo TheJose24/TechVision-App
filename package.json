@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "format": "prettier --write \"./src/**/*.{ts,json,html}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "private": true,
   "dependencies": {
@@ -21,8 +22,17 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "@types/three": "^0.170.0",
+    "d3": "^7.9.0",
+    "glightbox": "^3.3.0",
+    "globe.gl": "^2.33.2",
     "rxjs": "~7.8.0",
+    "scrollreveal": "^4.0.9",
+    "swiper": "^11.1.15",
+    "three": "^0.171.0",
+    "three-globe": "^2.35.2",
     "tslib": "^2.3.0",
+    "vanta": "^0.5.24",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
@@ -36,7 +46,9 @@
     "@angular/compiler-cli": "^17.3.0",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@types/d3": "^7.4.3",
     "@types/jasmine": "~5.1.0",
+    "@types/scrollreveal": "^0.0.11",
     "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.11.0",
     "autoprefixer": "^10.4.20",
@@ -54,6 +66,7 @@
     "postcss": "^8.4.47",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.14",
     "typescript": "~5.4.2"
   }

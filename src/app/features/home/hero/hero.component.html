@@ -1,0 +1,181 @@
+<section
+  class="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-indigo-950 to-slate-900"
+>
+  <!-- Gradient Overlay -->
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-transparent to-transparent"
+  ></div>
+
+  <!-- Tech Pattern Background -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" [style.background-image]="'url(/assets/pattern-grid.svg)'"></div>
+  </div>
+
+  <div class="container mx-auto px-4">
+    <div class="flex min-h-screen items-center">
+      <!-- Left side content -->
+      <div
+        class="z-10 w-full space-y-6 pb-12 pt-[5rem] md:w-3/4 lg:w-1/2"
+        appInView
+        (inView)="onInView($event)"
+      >
+        <!-- Tech Badge -->
+        <div
+          [@fadeIn]="isVisible ? 'visible' : 'hidden'"
+          class="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1.5 sm:px-4 sm:py-2"
+        >
+          <span class="mr-2 h-2 w-2 animate-pulse rounded-full bg-indigo-500"></span>
+          <span class="text-xs font-medium text-indigo-400 sm:text-sm"
+            >Innovación Tecnológica Global</span
+          >
+        </div>
+
+        <!-- Main heading -->
+        <h1
+          class="font-sans text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+          [@fadeInUp]="isVisible ? 'visible' : 'hidden'"
+        >
+          Desarrollo &
+          <span class="relative inline-block">
+            Consultoría
+            <svg
+              class="absolute -bottom-2 left-0 w-full"
+              height="8"
+              viewBox="0 0 100 8"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0 7c20-2 40-2 60 0s40 2 60 0"
+                stroke="url(#gradient)"
+                stroke-width="2"
+                fill="none"
+              />
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color: #6366f1" />
+                  <stop offset="50%" style="stop-color: #818cf8" />
+                  <stop offset="100%" style="stop-color: #6366f1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span
+            class="mt-2 block text-2xl font-light text-slate-300 sm:text-3xl md:text-4xl lg:text-5xl"
+          >
+            de Software Enterprise
+          </span>
+        </h1>
+
+        <!-- Tech Stats -->
+        <div
+          class="flex flex-col space-y-4 sm:flex-row sm:gap-8 sm:space-y-0"
+          [@fadeIn]="isVisible ? 'visible' : 'hidden'"
+        >
+          <div class="flex items-center">
+            <div
+              class="mr-4 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500/10"
+            >
+              <svg
+                class="h-6 w-6 text-indigo-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 12h14M12 5l7 7-7 7"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-white">100+</div>
+              <div class="text-sm text-slate-400">Proyectos Exitosos</div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div
+              class="mr-4 flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500/10"
+            >
+              <svg
+                class="h-6 w-6 text-indigo-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-white">15+</div>
+              <div class="text-sm text-slate-400">Países</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p
+          class="max-w-2xl py-2 text-base leading-relaxed text-slate-300 sm:py-4 sm:text-lg"
+          [@fadeIn]="isVisible ? 'visible' : 'hidden'"
+        >
+          Impulsamos la transformación digital de empresas globales mediante soluciones tecnológicas
+          innovadoras y servicios de consultoría especializada.
+        </p>
+
+        <!-- CTA buttons -->
+        <div
+          class="flex flex-col gap-4 py-4 sm:flex-row sm:py-6"
+          [@fadeIn]="isVisible ? 'visible' : 'hidden'"
+        >
+          <button
+            type="button"
+            class="group relative overflow-hidden rounded-lg bg-gradient-to-r from-indigo-500 to-indigo-600 px-8 py-4 transition-all duration-300 hover:scale-105"
+          >
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="h-[120%] w-4 animate-[spin_4s_linear_infinite] bg-white/10"></div>
+            </div>
+            <span class="relative z-10 font-medium text-white">Iniciar Proyecto</span>
+          </button>
+
+          <button
+            type="button"
+            class="group rounded-lg border-2 border-indigo-500/50 bg-indigo-500/5 px-8 py-4 transition-all duration-300 hover:border-indigo-500 hover:bg-indigo-500/10"
+          >
+            <span class="font-medium text-indigo-400 transition-colors group-hover:text-white">
+              Explorar Soluciones
+              <span
+                class="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Tech Stack Pills -->
+        <div class="flex flex-wrap gap-2 py-4" [@fadeIn]="isVisible ? 'visible' : 'hidden'">
+          <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-400">Angular</span>
+          <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-400">React</span>
+          <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-400">Node.js</span>
+          <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-400">Python</span>
+          <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-400">AWS</span>
+          <span class="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-400">Azure</span>
+        </div>
+      </div>
+
+      <!-- Right side globe -->
+      <div class="relative hidden h-screen lg:block lg:w-1/2">
+        <app-globe class="absolute inset-0"></app-globe>
+      </div>
+    </div>
+
+    <!-- Animated particles -->
+    <canvas #particleCanvas class="pointer-events-none absolute inset-0 h-full w-full"></canvas>
+  </div>
+</section>
