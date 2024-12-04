@@ -6,6 +6,7 @@ import { BlogComponent } from './features/blog/blog.component';
 import { BlogC1Component } from './features/blog/bloC1.component';
 import { BlogC2Component } from './features/blog/bloC2.component';
 import { BlogC3Component } from './features/blog/bloC3.component';
+import { PaginasWebComponent } from './features/paginas-web/paginas-web.component';
 
 export const routes: Routes = [
   {
@@ -41,7 +42,12 @@ export const routes: Routes = [
       {
         path: 'blogC1',
         component: BlogC1Component,
-      } /*
+      },
+      {
+        path: 'paginas-web',
+        component: PaginasWebComponent,
+      },
+      /*
       EJEMPLO DE COMO AGREGAR UNA NUEVA RUTA
       {
         path: 'agencia',
@@ -50,7 +56,7 @@ export const routes: Routes = [
       {
         path: 'app-movil',
         component: AppMovil,
-      }*/,
+      }*/
     ],
   },
 ];
