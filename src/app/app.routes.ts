@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SupportComponent } from './features/soporte-tecnico/support.component';
+import { PaginasWebComponent } from './features/paginas-web/paginas-web.component';
 
 export const routes: Routes = [
   {
@@ -21,7 +22,12 @@ export const routes: Routes = [
       {
         path: 'soporte-tecnico',
         component: SupportComponent,
-      } /*
+      },
+      {
+        path: 'paginas-web',
+        component: PaginasWebComponent,
+      },
+      /*
       EJEMPLO DE COMO AGREGAR UNA NUEVA RUTA
       {
         path: 'agencia',
@@ -30,7 +36,7 @@ export const routes: Routes = [
       {
         path: 'app-movil',
         component: AppMovil,
-      }*/,
+      }*/
     ],
   },
 ];
