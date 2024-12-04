@@ -51,7 +51,7 @@ export const routes: Routes = [
       {
         path: 'contacto',
         component: ContactoComponent,
-      }
+      },
       /*
       EJEMPLO DE COMO AGREGAR UNA NUEVA RUTA
       {
