@@ -1,0 +1,604 @@
+<main class="main relative dark:bg-gray-900">
+  <section
+    id="support"
+    class="relative overflow-hidden bg-primary pt-[120px] text-primary-color md:pt-[90px] lg:pt-[90px]"
+  ></section>
+  <main class="font-sans">
+    <section
+      class="fade-in relative rounded-lg border-2 border-gray-300 py-8 shadow-lg dark:border-gray-700"
+    >
+      <h1 class="mb-4 animate-bounce text-left text-gray-900 dark:text-white">Blog</h1>
+
+      <!-- Descripción -->
+      <p
+        class="animate-fade-in mb-6 text-left text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+      >
+        Contenido de últimas tendencias tecnológicas, información sobre conceptos de desarrollo de
+        tecnologías y más.
+      </p>
+      <nav class="space-x-4 text-left">
+        <a
+          [routerLink]="'/home'"
+          class="animate-slide-in-left inline-block rounded-md bg-white px-6 py-3 font-semibold text-blue-900 shadow-md transition hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+        >
+          Ver Contenido
+        </a>
+        <a
+          [routerLink]="'/contacto'"
+          class="animate-slide-in-right inline-block rounded-md bg-white px-6 py-3 font-semibold text-blue-900 shadow-md transition hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+        >
+          Contactar →
+        </a>
+      </nav>
+    </section>
+
+    <section class="bg-gray-50 px-2 py-16 dark:bg-gray-900">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Tarjeta 1 -->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T1.jpg"
+              alt="Automatización de procesos con un software personalizado"
+              class="h-70 w-full transform object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-90"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a [routerLink]="['/blogC1']" class="hover:text-blue-600 dark:hover:text-blue-400">
+                Automatización de procesos con un software personalizado
+              </a>
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">Jun 21, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              Un software personalizado se ha convertido en un factor clave para impulsar la
+              eficiencia y el crecimiento en las organizaciones...
+            </p>
+            <a
+              [routerLink]="['/blogC1']"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 2-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T2.jpg"
+              alt="Como saber que tipo de software necesito para mi negocio"
+              class="h-70 w-full object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-90"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a [routerLink]="['/blogC2']" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >Como saber que tipo de software necesito para mi negocio</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">Jun 1, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              En la era digital actual, contar con un software para negocio adecuado marca la
+              diferencia en el éxito empresarial. Hay tantas opciones disponibles en el mercado, que
+              es fundamental entender cómo elegir el software adecuado que se ajuste a tus
+              necesidades específicas....
+            </p>
+            <a
+              [routerLink]="['/blogC2']"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 3-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T3.jpg"
+              alt="Como saber que tipo de página web necesito"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a [routerLink]="['/blogC3']" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >Como saber que tipo de página web necesito</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              Determinar qué tipos de página web necesitas en el mundo digital actual, es esencial
+              para tener una presencia en línea en cualquier negocio o proyecto. Una de las primeras
+              decisiones que debes tomar al embarcarte en la creación de tu sitio web es verificar
+              la amplia...
+            </p>
+            <a
+              [routerLink]="['/blogC3']"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 4-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T4.jpg"
+              alt="7 beneficios del desarrollo de software a medida para tu Negocio"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >7 beneficios del desarrollo de software a medida para tu Negocio</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              El desarrollo de software, a medida actual, juega un papel fundamental en el éxito y
+              la eficiencia de las empresas. Es una de las herramientas clave para optimizar los
+              procesos y lograr una ventaja competitiva. A diferencia del software comercial
+              disponible en el...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 5-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T5.jpg"
+              alt="La ciberseguridad y su importancia en aplicaciones móviles"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >La ciberseguridad y su importancia en aplicaciones móviles</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              En la era digital actual, la ciberseguridad en aplicaciones móviles se ha vuelto
+              omnipresente, se ha convertido en un tema crucial. Las aplicaciones móviles,
+              utilizadas por millones de personas en todo el mundo, contienen datos personales,
+              financieros y confidenciales...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+
+        <!-- Tarjeta 6-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T6.jpg"
+              alt="Desarrollo de las empresas fintech en Peru"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >Desarrollo de las empresas fintech en Peru</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              Las empresas Fintech en Perú ha experimentado un notable crecimiento en el sector
+              financiero, que ha revolucionado la forma en que las empresas y los consumidores
+              realizan transacciones financieras. Las empresas fintech, que combinan la tecnología
+              con los servicios...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 7-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T7.jpg"
+              alt="Las tecnologías más utilizadas para el desarrollo de aplicaciones móviles"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >Las tecnologías más utilizadas para el desarrollo de aplicaciones móviles</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              En la era digital actual, las tecnologías para aplicaciones móviles se han convertido
+              en una parte integral de nuestras vidas. Desde realizar transacciones bancarias hasta
+              comprar productos en línea, las apps móviles nos brindan comodidad y acceso a una
+              amplia gama de...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 8-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T8.jpg"
+              alt="El papel revolucionario de la Inteligencia Artificial en el SEO"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >El papel revolucionario de la Inteligencia Artificial en el SEO</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              La inteligencia artificial (IA) en el SEO (Search Engine Optimization) se han
+              convertido en dos conceptos fundamentales para el éxito en línea. La IA ha demostrado
+              ser una herramienta poderosa para mejorar la eficiencia y la personalización en
+              diversas industrias....
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 9-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T9.jpg"
+              alt="Cómo aprovechar el uso de la inteligencia artificial"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >Cómo aprovechar el uso de la inteligencia artificial</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              El uso de inteligencia artificial (IA) ha transformado rápidamente el mundo en que
+              vivimos. Desde la asistencia virtual hasta los vehículos autónomos, la IA está
+              cambiando la forma en que interactuamos con la tecnología. En las empresas operan y se
+              relacionan con sus...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 10-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T10.jpg"
+              alt="Cómo la inteligencia artificial está transformando las empresas"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >Cómo la inteligencia artificial está transformando las empresas</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              La inteligencia artificial es una de las áreas de investigación más importantes de la
+              informática y ha tenido un gran impacto en la sociedad y la economía. En las empresas
+              se está convirtiendo en una herramienta fundamental, ya que tiene la capacidad de
+              procesar...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 11-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T11.jpg"
+              alt="Ventajas de un sistema alquilado sobre un sistema personalizado"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >Ventajas de un sistema alquilado sobre un sistema personalizado</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              En la actualidad, la mayoría de sistema alquilados ayudan a las empresas en gran
+              medida por su tecnología para realizar sus operaciones diarias. Ya sea para la gestión
+              de inventario, la comunicación interna o la gestión de clientes, los sistemas de
+              software son una...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 12-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T12.jpg"
+              alt="¿Cómo voy administrar mi aplicación?"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >¿Cómo voy administrar mi aplicación?</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              Administrar una aplicación móvil son una herramienta vital para muchas empresas. No
+              solo son una excelente manera de llegar a los clientes y mejorar su experiencia, sino
+              que también pueden mejorar la eficiencia empresarial. Una vez que su aplicación móvil
+              está lista...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 13-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T13.jpg"
+              alt="¿Cómo dividir las funciones de mi aplicación?"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >¿Cómo dividir las funciones de mi aplicación?</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              Si estás desarrollando una app, una de las decisiones más importantes que debes tomar
+              es cómo dividir las funciones de una aplicación. La forma en que las organices puede
+              tener un gran impacto en la escalabilidad, el rendimiento y la facilidad de
+              mantenimiento de tu...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 14-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T14.jpg"
+              alt="¿Qué realmente necesito que tenga mi aplicación?"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400"
+                >¿Qué realmente necesito que tenga mi aplicación?</a
+              >
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              Las características de una aplicación móvil son algo que toda empresa debe tener en
+              cuenta, ya que representa una gran inversión. Te ayudará a mejorar la relación con tus
+              clientes y aumentar tus ventas. Sin embargo, para que sea efectiva, es importante
+              considerar...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+        <!-- Tarjeta 15-->
+        <article
+          class="overflow-hidden rounded-lg bg-white shadow-lg dark:bg-gray-800 dark:text-white"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="assets/imgT/T15.jpg"
+              alt="Optimiza tu página web para motores de búsqueda"
+              class="h-70 w-full object-cover"
+            />
+            <div
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            >
+              <p class="text-lg font-semibold">Explora más sobre este tema</p>
+            </div>
+          </div>
+          <section class="p-6">
+            <h2 class="mb-2 animate-bounce text-lg font-semibold text-gray-800 dark:text-white">
+              <a href="./T1.html" class="hover:text-blue-600 dark:hover:text-blue-400">
+                Optimiza tu página web para motores de búsqueda
+              </a>
+            </h2>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-300">May 30, 2023</p>
+            <p class="text-sm text-gray-700 dark:text-gray-200">
+              El posicionamiento web en motores de búsqueda es una tarea crucial si deseas mejorar
+              tu visibilidad en los resultados de búsqueda. En este blog, exploraremos las mejores
+              prácticas para optimizar tu sitio web para los motores de búsqueda, desde la selección
+              de...
+            </p>
+            <a
+              href="./T1.html"
+              class="mt-4 inline-block font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-600"
+            >
+              Leer más →
+            </a>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+</main>
