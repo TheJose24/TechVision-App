@@ -1,21 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-
-interface SwiperConfig {
-  slidesPerView: number;
-  spaceBetween: number;
-  breakpoints?: {
-    [key: number]: {
-      slidesPerView: number;
-      spaceBetween: number;
-    };
-  };
-}
-
-interface SwiperConstructor {
-  new (selector: string, config: SwiperConfig): unknown;
-}
-
-declare let Swiper: SwiperConstructor;
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-support',
