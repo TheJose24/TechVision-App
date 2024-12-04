@@ -52,18 +52,11 @@
               <li class="group relative">
                 <a
                   [routerLink]="'/'"
-                  class="ic-page-scroll active mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 dark:text-body-dark-12 lg:dark:text-primary-color"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary lg:mx-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 dark:text-body-dark-12 lg:dark:text-primary-color"
                   role="menuitem"
                   >Inicio</a
-                >
-              </li>
-
-              <li class="group relative">
-                <a
-                  [routerLink]="'/agencia'"
-                  class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 dark:text-body-dark-12 lg:dark:text-primary-color"
-                  role="menuitem"
-                  >Agencia</a
                 >
               </li>
 
@@ -88,15 +81,8 @@
                 >
                   <li>
                     <a
-                      [routerLink]="'/app-moviles'"
-                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    >
-                      App Móviles
-                    </a>
-                  </li>
-                  <li>
-                    <a
                       [routerLink]="'/soporte-tecnico'"
+                      routerLinkActive="active"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >
                       Soporte Técnico
@@ -105,6 +91,7 @@
                   <li>
                     <a
                       [routerLink]="'/paginas-web'"
+                      routerLinkActive="active"
                       class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     >
                       Páginas Web
@@ -116,6 +103,7 @@
               <li class="group relative">
                 <a
                   [routerLink]="'/blog'"
+                  routerLinkActive="active"
                   class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 dark:text-body-dark-12 lg:dark:text-primary-color"
                   role="menuitem"
                   >Blog</a
@@ -125,6 +113,7 @@
               <li class="group relative">
                 <a
                   [routerLink]="'/contacto'"
+                  routerLinkActive="active"
                   class="ic-page-scroll mx-8 flex py-2 text-base font-medium text-body-light-12 group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-primary-color lg:group-hover:text-primary-color lg:group-hover:opacity-70 dark:text-body-dark-12 lg:dark:text-primary-color"
                   role="menuitem"
                   >Contacto</a
@@ -142,7 +131,7 @@
           ></button>
           <div class="hidden sm:flex">
             <a
-              href="javascript:void(0)"
+              [routerLink]="'/contacto'"
               class="btn-navbar ml-5 rounded-md bg-primary-color bg-opacity-20 px-6 py-3 text-base font-medium text-primary-color hover:bg-opacity-100 hover:text-primary"
               role="button"
               >Empezar</a
