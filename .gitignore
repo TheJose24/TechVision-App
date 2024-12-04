@@ -64,3 +64,5 @@ yarn-error.log
 .husky/_
 .nx/cache
 .nx/workspace-data
+
+package-lock.json
