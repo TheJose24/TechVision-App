@@ -213,9 +213,6 @@
   .ic-navbar.sticky .ic-page-scroll {
     @apply lg:text-body-light-12 lg:hover:text-primary lg:hover:opacity-100 lg:dark:text-body-dark-12;
   }
-  .ic-page-scroll.active {
-    @apply text-primary lg:text-primary-color lg:opacity-70;
-  }
   .ic-navbar.sticky .ic-page-scroll.active {
     @apply lg:text-primary lg:opacity-100;
   }
@@ -226,46 +223,11 @@
     @apply bg-primary hover:bg-primary-light-10 hover:text-primary-color dark:hover:bg-primary-dark-10;
   }
 
-  #home {
-    @apply bg-cover bg-center bg-no-repeat;
-    background-image: radial-gradient(
-      circle at top right,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.1) 28%,
-      rgba(255, 255, 255, 0.075) 28%,
-      rgba(255, 255, 255, 0.075) 45%,
-      rgba(255, 255, 255, 0.05) 45%,
-      rgba(255, 255, 255, 0.05) 63%,
-      rgba(255, 255, 255, 0.025) 63%,
-      rgba(255, 255, 255, 0.025) 100%
-    );
-  }
-
   .section-area {
     @apply relative py-24 text-body-light-11 dark:text-body-dark-11;
   }
   .section-area:nth-child(odd) {
     @apply bg-body-striped-light dark:bg-body-striped-dark;
-  }
-
-  .tabs-nav .tabs-link.active {
-    @apply bg-primary text-primary-color;
-  }
-  .tabs .tabs-content {
-    @apply block;
-  }
-  .tabs .tabs-content.hide {
-    @apply hidden;
-  }
-
-  .portfolio-menu button.active {
-    @apply bg-primary text-primary-color;
-  }
-  .portfolio.show {
-    @apply block;
-  }
-  .portfolio.hide {
-    @apply hidden;
   }
 
   #call-action {
