@@ -7,6 +7,7 @@ import { BlogC1Component } from './features/blog/bloC1.component';
 import { BlogC2Component } from './features/blog/bloC2.component';
 import { BlogC3Component } from './features/blog/bloC3.component';
 import { PaginasWebComponent } from './features/paginas-web/paginas-web.component';
+import { ContactoComponent } from './features/Contacto/Contacto.component';
 
 export const routes: Routes = [
   {
@@ -46,6 +47,10 @@ export const routes: Routes = [
       {
         path: 'paginas-web',
         component: PaginasWebComponent,
+      },
+      {
+        path: 'contacto',
+        component: ContactoComponent,
       },
       /*
       EJEMPLO DE COMO AGREGAR UNA NUEVA RUTA
