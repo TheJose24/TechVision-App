@@ -1,24 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
-interface VantaConfig {
-  el: string | HTMLElement;
-  mouseControls: boolean;
-  touchControls: boolean;
-  gyroControls: boolean;
-  minHeight: number;
-  minWidth: number;
-  scale: number;
-  scaleMobile: number;
-  color?: number;
-  points?: number;
-  maxDistance?: number;
-}
-
-interface VantaAPI {
-  NET: (config: VantaConfig) => void;
-  WAVES: (config: VantaConfig) => void;
-}
-
 interface SwiperConfig {
   slidesPerView: number;
   spaceBetween: number;
@@ -34,7 +15,6 @@ interface SwiperConstructor {
   new (selector: string, config: SwiperConfig): unknown;
 }
 
-declare let VANTA: VantaAPI;
 declare let Swiper: SwiperConstructor;
 
 @Component({
@@ -47,10 +27,10 @@ export class SupportComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.initializeCarousel();
+    this.initScrollAnimation();
   }
 
   ngAfterViewInit(): void {
-    this.initializeVanta();
     this.initializeSwiper();
   }
 
@@ -82,34 +62,6 @@ export class SupportComponent implements OnInit, AfterViewInit {
     // Iniciar carrusel
     goToSlide(0);
   }
-
-  private initializeVanta(): void {
-    VANTA.NET({
-      el: '#ba',
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0x3fc6ff,
-      points: 15.0,
-      maxDistance: 15.0,
-    });
-
-    VANTA.WAVES({
-      el: '#b',
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.0,
-      minWidth: 200.0,
-      scale: 1.0,
-      scaleMobile: 1.0,
-    });
-  }
-
   private initializeSwiper(): void {
     // Inicializar Swiper para testimonios
     new Swiper('.testimonial-carousel', {
@@ -125,6 +77,27 @@ export class SupportComponent implements OnInit, AfterViewInit {
           spaceBetween: 30,
         },
       },
+    });
+  }
+  private initScrollAnimation(): void {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observar todos los elementos con la clase scroll-revealed
+    document.querySelectorAll('.scroll-revealed').forEach(element => {
+      observer.observe(element);
     });
   }
 }
