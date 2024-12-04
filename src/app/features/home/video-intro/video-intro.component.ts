@@ -1,4 +1,3 @@
-// video-intro.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import GLightbox from 'glightbox';
@@ -13,7 +12,7 @@ import { ScrollRevealDirective } from '../../../shared/directives/scroll-reveal.
 export class VideoIntroComponent implements OnInit {
   thumbnailUrl: string = '/assets/img/intro-video.webp';
   videoTitle: string = 'Video Introductorio';
-  videoUrl: string = 'https://www.youtube.com/watch?v=5MBYlYSczGg';
+  videoUrl: string = 'https://www.youtube-nocookie.com/embed/5MBYlYSczGg';
 
   ngOnInit(): void {
     this.initializeLightbox();

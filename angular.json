@@ -13,36 +13,58 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "allowedCommonJsDependencies": ["glightbox", "frame-ticker", "yaot"],
+            "allowedCommonJsDependencies": [
+              "glightbox",
+              "frame-ticker",
+              "yaot",
+              "d3",
+              "globe.gl",
+              "three-globe",
+              "vanta",
+              "scrollreveal"
+            ],
             "outputPath": "dist/tech-vision-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
-            "scripts": [],
+            "styles": [
+              "node_modules/glightbox/dist/css/glightbox.min.css",
+              "node_modules/swiper/swiper-bundle.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/glightbox/dist/js/glightbox.min.js",
+              "node_modules/swiper/swiper-bundle.js",
+              "node_modules/vanta/dist/vanta.waves.min.js",
+              "node_modules/vanta/dist/vanta.net.min.js"
+            ],
             "optimization": {
+              "scripts": true,
               "styles": {
                 "minify": true,
                 "inlineCritical": false
-              }
+              },
+              "fonts": true
             },
             "sourceMap": false,
-            "namedChunks": false
+            "namedChunks": true,
+            "preserveSymlinks": true,
+            "ssr": false
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "3mb"
+                  "maximumWarning": "2.5mb",
+                  "maximumError": "3.5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "12kb"
                 }
               ],
               "outputHashing": "all",
@@ -53,12 +75,16 @@
                   "inlineCritical": true
                 },
                 "fonts": true
-              }
+              },
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"

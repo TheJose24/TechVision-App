@@ -62,17 +62,19 @@
               <div class="flex justify-center gap-2">
                 <a
                   [href]="project.imageUrl"
-                  class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/90 text-white transition-colors hover:bg-primary md:h-12 md:w-12"
+                  class="portfolio-box inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/90 text-white transition-colors hover:bg-primary md:h-12 md:w-12"
                   aria-label="Ver imagen"
                 >
-                  <i class="lni lni-zoom-in text-lg md:text-xl"></i>
+                  <i class="lni lni-zoom-in text-lg text-white md:text-xl"></i>
                 </a>
                 <a
-                  href="javascript:void(0)"
+                  [href]="project.projectUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/90 text-white transition-colors hover:bg-primary md:h-12 md:w-12"
                   aria-label="Ver detalles"
                 >
-                  <i class="lni lni-link text-lg md:text-xl"></i>
+                  <i class="lni lni-link text-lg text-white md:text-xl"></i>
                 </a>
               </div>
             </div>
@@ -81,8 +83,10 @@
 
         <!-- Project Info -->
         <div class="pt-4">
-          <h4 class="mb-2 text-lg font-semibold transition-colors hover:text-primary md:text-xl">
-            <a href="javascript:void(0)">{{ project.title }}</a>
+          <h4
+            class="mb-2 cursor-pointer text-lg font-semibold transition-colors hover:text-primary md:text-xl"
+          >
+            {{ project.title }}
           </h4>
           <p class="text-sm text-gray-600 md:text-base dark:text-gray-300">
             {{ project.description }}

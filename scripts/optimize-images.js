@@ -5,7 +5,6 @@ const path = require('path');
 const inputDir = 'src/assets/img/avatar';
 const outputDir = 'src/assets/img/optimized';
 
-// Asegúrate de que el directorio de salida exista
 if (!fs.existsSync(outputDir)){
     fs.mkdirSync(outputDir, { recursive: true });
 }

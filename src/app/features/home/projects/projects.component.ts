@@ -9,6 +9,7 @@ interface Project {
   description: string;
   category: 'web' | 'mobile' | 'cloud' | 'consulting' | 'enterprise';
   imageUrl: string;
+  projectUrl?: string;
 }
 
 @Component({
@@ -24,42 +25,48 @@ export class ProjectsComponent implements AfterViewInit {
       title: 'Sistema ERP Empresarial',
       description: 'Desarrollo de sistema integral de gestión empresarial con Angular y .NET Core',
       category: 'enterprise',
-      imageUrl: './assets/img/portfolio/portfolio-1.jpg',
+      imageUrl: './assets/img/portfolio/portfolio-1.webp',
+      projectUrl: 'https://www.google.com',
     },
     {
       id: 2,
       title: 'App de Delivery',
       description: 'Aplicación móvil multiplataforma desarrollada con Flutter',
       category: 'mobile',
-      imageUrl: './assets/img/portfolio/portfolio-2.jpg',
+      imageUrl: './assets/img/portfolio/portfolio-2.webp',
+      projectUrl: 'https://www.google.com',
     },
     {
       id: 3,
       title: 'Plataforma E-learning',
       description: 'Sistema LMS con microservicios y arquitectura serverless',
       category: 'web',
-      imageUrl: './assets/img/portfolio/portfolio-3.jpg',
+      imageUrl: './assets/img/portfolio/portfolio-3.webp',
+      projectUrl: 'https://www.google.com',
     },
     {
       id: 4,
       title: 'Migración a la Nube',
       description: 'Transformación de infraestructura legacy a AWS Cloud',
       category: 'cloud',
-      imageUrl: './assets/img/portfolio/portfolio-4.jpg',
+      imageUrl: './assets/img/portfolio/portfolio-4.webp',
+      projectUrl: 'https://www.google.com',
     },
     {
       id: 5,
       title: 'Consultoría DevOps',
       description: 'Implementación de CI/CD y cultura DevOps',
       category: 'consulting',
-      imageUrl: './assets/img/portfolio/portfolio-5.jpg',
+      imageUrl: './assets/img/portfolio/portfolio-5.webp',
+      projectUrl: 'https://www.google.com',
     },
     {
       id: 6,
       title: 'Sistema de Gestión Financiera',
       description: 'Plataforma fintech con integración de APIs bancarias',
       category: 'enterprise',
-      imageUrl: './assets/img/portfolio/portfolio-6.jpg',
+      imageUrl: './assets/img/portfolio/portfolio-6.webp',
+      projectUrl: 'https://www.google.com',
     },
   ]);
 

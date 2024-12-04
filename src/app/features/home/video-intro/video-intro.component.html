@@ -27,9 +27,11 @@
         [src]="thumbnailUrl"
         [alt]="videoTitle"
         class="aspect-video h-full w-full rounded-xl object-cover"
+        loading="lazy"
       />
       <button
         type="button"
+        aria-label="Ver video"
         class="video-popup absolute left-1/2 top-1/2 inline-flex h-[80px] w-[80px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-[1.875rem] text-primary-color shadow-md transition-all duration-300 hover:bg-primary-color hover:text-primary hover:shadow-xl focus:bg-primary-color focus:text-primary focus:shadow-xl"
         [attr.href]="videoUrl"
       >

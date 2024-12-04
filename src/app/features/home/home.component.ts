@@ -9,6 +9,7 @@ import { FaqComponent } from './faq/faq.component';
 import { ClientComponent } from './clients/client.component';
 import { SEOService } from '../../core/services/seo.services';
 import { TestimonialComponent } from './testimonials/testimonial.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,7 @@ import { TestimonialComponent } from './testimonials/testimonial.component';
     TestimonialComponent,
     FaqComponent,
     ClientComponent,
+    RouterLink,
   ],
 })
 export class HomeComponent implements OnInit {
