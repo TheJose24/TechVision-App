@@ -40,7 +40,7 @@ export class TeamComponent {
       id: 1,
       name: 'Christopher Porras',
       position: 'UI Designer',
-      image: './assets/img/avatar/avatar-1.jpg',
+      image: './assets/img/avatar/avatar-1.webp',
       socialLinks: {
         facebook: 'https://facebook.com',
         twitter: 'https://twitter.com',
@@ -51,7 +51,7 @@ export class TeamComponent {
       id: 2,
       name: 'Jose Sanchez',
       position: 'Full Stack Developer',
-      image: './assets/img/avatar/avatar-2.jpg',
+      image: './assets/img/avatar/avatar-2.webp',
       socialLinks: {
         facebook: 'https://facebook.com',
         twitter: 'https://twitter.com',
@@ -62,7 +62,7 @@ export class TeamComponent {
       id: 3,
       name: 'Jesus Palomino',
       position: 'UX Designer',
-      image: './assets/img/avatar/avatar-3.jpg',
+      image: './assets/img/avatar/avatar-3.webp',
       socialLinks: {
         facebook: 'https://facebook.com',
         twitter: 'https://twitter.com',
@@ -73,7 +73,7 @@ export class TeamComponent {
       id: 4,
       name: 'Manuel Rodriguez',
       position: 'Project Manager',
-      image: './assets/img/avatar/avatar-4.jpg',
+      image: './assets/img/avatar/avatar-4.webp',
       socialLinks: {
         facebook: 'https://facebook.com',
         twitter: 'https://twitter.com',

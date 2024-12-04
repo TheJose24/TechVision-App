@@ -12,16 +12,10 @@ import { ContactoComponent } from './features/Contacto/Contacto.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-
-  {
-    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: 'home',
+        path: '',
         component: HomeComponent,
       },
       {

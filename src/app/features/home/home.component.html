@@ -6,130 +6,7 @@
   <app-about></app-about>
 
   <!-- Servicios section -->
-  <app-services>
-    <div class="container">
-      <div class="scroll-revealed mx-auto mb-12 max-w-[550px] text-center">
-        <h6 class="mb-2 block text-lg font-semibold text-primary">Servicios</h6>
-        <h2 class="mb-6">Nuestros Servicios de Consultoría y Desarrollo</h2>
-        <p>
-          Ofrecemos soluciones de software personalizadas para ayudar a su empresa a alcanzar sus
-          objetivos de manera eficiente y efectiva.
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-          <div class="group hover:-translate-y-1">
-            <div
-              class="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary text-[37px]/none text-primary-color"
-            >
-              <i class="lni lni-code"></i>
-            </div>
-            <div class="w-full">
-              <h4 class="mb-5 text-[1.25rem]/tight font-semibold">
-                Desarrollo de Software a Medida
-              </h4>
-              <p>
-                Creamos aplicaciones y sistemas personalizados, adaptados a las necesidades
-                específicas de su negocio para maximizar eficiencia y productividad.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-          <div class="group hover:-translate-y-1">
-            <div
-              class="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary text-[37px]/none text-primary-color"
-            >
-              <i class="lni lni-consulting"></i>
-            </div>
-            <div class="w-full">
-              <h4 class="mb-5 text-[1.25rem]/tight font-semibold">
-                Consultoría en Transformación Digital
-              </h4>
-              <p>
-                Asesoramos a su empresa en el proceso de transformación digital, optimizando
-                procesos y adoptando tecnologías innovadoras.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-          <div class="group hover:-translate-y-1">
-            <div
-              class="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary text-[37px]/none text-primary-color"
-            >
-              <i class="lni lni-network"></i>
-            </div>
-            <div class="w-full">
-              <h4 class="mb-5 text-[1.25rem]/tight font-semibold">Integración de Sistemas</h4>
-              <p>
-                Conectamos sus sistemas y aplicaciones para mejorar la comunicación y el flujo de
-                información en su organización.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-          <div class="group hover:-translate-y-1">
-            <div
-              class="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary text-[37px]/none text-primary-color"
-            >
-              <i class="lni lni-shield"></i>
-            </div>
-            <div class="w-full">
-              <h4 class="mb-5 text-[1.25rem]/tight font-semibold">
-                Seguridad y Auditoría de Software
-              </h4>
-              <p>
-                Realizamos auditorías de seguridad y aseguramos que sus aplicaciones estén
-                protegidas frente a amenazas y vulnerabilidades.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-          <div class="group hover:-translate-y-1">
-            <div
-              class="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary text-[37px]/none text-primary-color"
-            >
-              <i class="lni lni-cloud"></i>
-            </div>
-            <div class="w-full">
-              <h4 class="mb-5 text-[1.25rem]/tight font-semibold">Soluciones en la Nube</h4>
-              <p>
-                Ofrecemos servicios de migración e implementación de soluciones en la nube para
-                facilitar la escalabilidad y flexibilidad de su negocio.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="scroll-revealed col-12 sm:col-6 lg:col-4">
-          <div class="group hover:-translate-y-1">
-            <div
-              class="mb-6 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary text-[37px]/none text-primary-color"
-            >
-              <i class="lni lni-analysis"></i>
-            </div>
-            <div class="w-full">
-              <h4 class="mb-5 text-[1.25rem]/tight font-semibold">
-                Análisis de Datos y Business Intelligence
-              </h4>
-              <p>
-                Ayudamos a su empresa a aprovechar el poder de los datos con análisis avanzado y
-                soluciones de inteligencia empresarial.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </app-services>
+  <app-services> </app-services>
 
   <!-- Video intro section -->
   <app-video-intro></app-video-intro>
@@ -149,7 +26,7 @@
         </p>
         <div class="flex justify-center gap-4">
           <a
-            href="javascript:void(0)"
+            [routerLink]="'/contacto'"
             class="inline-block rounded-md bg-white px-6 py-3 font-semibold text-primary transition-colors hover:bg-gray-100"
             role="button"
           >
