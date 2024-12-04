@@ -2,8 +2,44 @@
   <!-- Sección Hero -->
   <section
     id="support"
-    class="relative overflow-hidden bg-primary pt-[120px] text-primary-color md:pt-[90px] lg:pt-[90px]"
-  ></section>
+    class="animated-background relative overflow-hidden bg-primary pt-[120px] text-primary-color md:pt-[90px] lg:pt-[90px]"
+  >
+    <section class="container">
+      <article class="flex flex-col items-center md:flex-row">
+        <!-- Texto -->
+        <section class="scroll-revealed w-full space-y-4 text-center md:w-1/2 md:text-left">
+          <h1 class="text-4xl font-bold text-slate-50 md:text-5xl lg:text-6xl">
+            Soporte Técnico Profesional
+          </h1>
+          <p class="text-lg text-gray-100 md:text-xl">
+            Soluciones rápidas y efectivas para mantener tu tecnología funcionando sin problemas.
+          </p>
+          <section class="flex justify-center gap-4 md:justify-start">
+            <a
+              href="#contact"
+              class="rounded bg-white px-6 py-3 font-semibold text-primary hover:bg-gray-100"
+            >
+              Solicitar Soporte
+            </a>
+            <a
+              href="#services"
+              class="rounded border border-white px-6 py-3 font-semibold text-white hover:bg-white/10"
+            >
+              Ver Servicios
+            </a>
+          </section>
+        </section>
+        <!-- Imagen -->
+        <figure class="scroll-revealed mt-8 w-full md:mt-0 md:w-1/2">
+          <img
+            src="../../../assets/img/icons/SoporteTecnico.png"
+            alt="Soporte Técnico"
+            class="mx-auto max-w-md"
+          />
+        </figure>
+      </article>
+    </section>
+  </section>
 
   <main class="font-sans">
     <!-- Carrusel -->
@@ -172,7 +208,9 @@
       <!-- Servicios -->
       <section id="services" class="fade-in py-16 dark:bg-gray-800">
         <article class="container mx-auto text-center">
-          <h3 class="mb-8 text-3xl font-bold dark:text-white">Nuestros Servicios</h3>
+          <h3 class="mb-8 text-3xl font-bold text-slate-800 dark:text-slate-100">
+            Nuestros Servicios
+          </h3>
           <section class="grid grid-cols-1 gap-8 md:grid-cols-3">
             <!-- Tarjeta 1 -->
             <article
@@ -185,10 +223,10 @@
                   alt="Icono de Asistencia Remota"
                 />
               </figure>
-              <h4 class="mb-4 text-xl font-semibold text-blue-600 dark:text-blue-400">
+              <h4 class="mb-4 text-xl font-semibold text-indigo-600 dark:text-indigo-300">
                 Asistencia Remota
               </h4>
-              <p class="text-gray-600 dark:text-gray-300">
+              <p class="text-slate-700 dark:text-slate-200">
                 Soporte inmediato desde cualquier lugar.
               </p>
             </article>
@@ -235,10 +273,12 @@
       </section>
 
       <!-- Nosotros -->
-      <section id="about" class="fade-in bg-gradient-to-r py-16 text-white">
+      <section id="about" class="fade-in bg-gradient-to-r py-16">
         <article class="container mx-auto text-center">
-          <h3 class="mb-6 text-3xl font-semibold">¿Por qué elegirnos?</h3>
-          <p class="mx-auto max-w-3xl text-lg">
+          <h3 class="mb-6 text-3xl font-semibold text-indigo-700 dark:text-indigo-300">
+            ¿Por qué elegirnos?
+          </h3>
+          <p class="mx-auto max-w-3xl text-lg text-slate-700 dark:text-slate-200">
             Somos especialistas en soporte técnico con años de experiencia ayudando a empresas a
             resolver sus problemas tecnológicos. Nuestro equipo garantiza soluciones rápidas y
             efectivas para que tu negocio nunca se detenga.
@@ -246,159 +286,49 @@
         </article>
       </section>
     </section>
-    <!-- Sección de Testimonios -->
-    <section id="testimonials" class="fade-in bg-gray-50 py-12 dark:bg-gray-800">
-      <article class="container mx-auto px-6 lg:px-20">
-        <!-- Encabezado -->
-        <header class="mx-auto mb-12 max-w-xl text-center">
-          <h6 class="mb-2 text-lg font-semibold text-blue-600 dark:text-blue-400">
-            Reseñas de clientes
-          </h6>
-          <h2 class="mb-4 text-3xl font-bold text-gray-800 dark:text-white">
-            Lo Que Dicen Nuestros Clientes
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300">
-            Nos enorgullece compartir las experiencias de nuestros clientes. Su satisfacción es
-            nuestra mayor recompensa y motivación para seguir ofreciendo soluciones de alta calidad
-            y valor.
-          </p>
-        </header>
-
-        <!-- Contenedor de testimonios con Swiper.js -->
-        <section class="swiper testimonial-carousel">
-          <section class="swiper-wrapper">
-            <!-- Testimonio 1 -->
-            <article class="swiper-slide">
-              <section
-                class="hover-card rounded-lg bg-white p-6 shadow-lg transition-transform duration-300 dark:bg-gray-700"
-                style="height: 200px"
-              >
-                <p class="mb-6 text-gray-700 dark:text-gray-300">
-                  "El servicio técnico fue excepcional. Resolvieron nuestros problemas de red en
-                  tiempo récord y nos brindaron soluciones preventivas para evitar futuros
-                  inconvenientes."
-                </p>
-                <footer class="absolute bottom-6 flex items-center">
-                  <img
-                    src="https://img.freepik.com/foto-gratis/retrato-hombre-negocios-seguro-serio_1262-17126.jpg?"
-                    alt="Avatar"
-                    class="mr-4 h-12 w-12 rounded-full object-cover"
-                  />
-                  <article>
-                    <h4 class="font-semibold text-gray-800 dark:text-white">Carlos Mendoza</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Gerente de Operaciones</p>
-                  </article>
-                </footer>
-              </section>
-            </article>
-
-            <!-- Testimonio 2 -->
-            <article class="swiper-slide">
-              <section
-                class="hover-card rounded-lg bg-white p-6 shadow-lg transition-transform duration-300 dark:bg-gray-700"
-                style="height: 200px"
-              >
-                <p class="mb-6 text-gray-700 dark:text-gray-300">
-                  "La implementación del sistema de seguridad informática superó nuestras
-                  expectativas. El equipo demostró gran profesionalismo y conocimiento técnico."
-                </p>
-                <footer class="absolute bottom-6 flex items-center">
-                  <img
-                    src="https://img.freepik.com/foto-gratis/hermosa-mujer-sonriente-pelo-largo-pie-contra-fondo-azul_662251-521.jpg?"
-                    alt="Avatar"
-                    class="mr-4 h-12 w-12 rounded-full object-cover"
-                  />
-                  <article>
-                    <h4 class="font-semibold text-gray-800 dark:text-white">Ana Martínez</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Directora de TI</p>
-                  </article>
-                </footer>
-              </section>
-            </article>
-
-            <!-- Testimonio 3 -->
-            <article class="swiper-slide">
-              <section
-                class="hover-card rounded-lg bg-white p-6 shadow-lg transition-transform duration-300 dark:bg-gray-700"
-                style="height: 200px"
-              >
-                <p class="mb-6 text-gray-700 dark:text-gray-300">
-                  "El soporte remoto ha sido fundamental para mantener nuestra operación. Respuesta
-                  rápida y soluciones efectivas en todo momento."
-                </p>
-                <footer class="absolute bottom-6 flex items-center">
-                  <img
-                    src="https://img.freepik.com/foto-gratis/joven-empresario-masculino-haciendo-contacto-visual-contra-fondo-azul_662251-739.jpg"
-                    alt="Avatar"
-                    class="mr-4 h-12 w-12 rounded-full object-cover"
-                  />
-                  <article>
-                    <h4 class="font-semibold text-gray-800 dark:text-white">Miguel Torres</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Empresario</p>
-                  </article>
-                </footer>
-              </section>
-            </article>
-
-            <!-- Testimonio 4 -->
-            <article class="swiper-slide">
-              <section
-                class="hover-card rounded-lg bg-white p-6 shadow-lg transition-transform duration-300 dark:bg-gray-700"
-                style="height: 200px"
-              >
-                <p class="mb-6 text-gray-700 dark:text-gray-300">
-                  "La optimización de nuestros sistemas mejoró significativamente el rendimiento de
-                  la empresa. Su equipo técnico es altamente competente y profesional."
-                </p>
-                <footer class="absolute bottom-6 flex items-center">
-                  <img
-                    src="https://img.freepik.com/foto-gratis/negocios-finanzas-empleo-concepto-mujeres-emprendedoras-exitosas-empresaria-asiatica-profesional-vasos-almorzando-bebiendo-cafe-llevar-usando-telefono-movil_1258-59113.jpg"
-                    alt="Avatar"
-                    class="mr-4 h-12 w-12 rounded-full object-cover"
-                  />
-                  <article>
-                    <h4 class="font-semibold text-gray-800 dark:text-white">Laura Sánchez</h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Gerente de Proyectos</p>
-                  </article>
-                </footer>
-              </section>
-            </article>
-          </section>
-
-          <section class="mb-20"></section>
-        </section>
-
-        <!-- Nosotros -->
-        <section
-          id="ba"
-          class="fade-in relative left-[50%] right-[50%] ml-[-50vw] mr-[-50vw] w-screen py-16 text-white"
-        >
-          <article class="container mx-auto text-center">
-            <h3
-              class="mb-8 text-4xl font-bold text-white"
-              style="
-                text-shadow:
-                  -2px -2px 0 #000,
-                  2px -2px 0 #000,
-                  -2px 2px 0 #000,
-                  2px 2px 0 #000;
-              "
-            >
-              Comenzar proyecto
-            </h3>
-            <p class="mx-auto mb-6 max-w-3xl text-xl">
-              Estamos capacitados para cumplir con tus requerimientos
-            </p>
-            <p class="mb-8 text-xl">¿Listo para comenzar?</p>
-            <button
-              class="transform rounded-lg bg-blue-600 px-8 py-3 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-800"
-              type="button"
-            >
-              Contactar con nosotros
-            </button>
-          </article>
-        </section>
-      </article>
-    </section>
   </main>
 </main>
+
+<section class="animated-background bg-primary py-16">
+  <section class="container">
+    <article class="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+      <figure class="scroll-revealed">
+        <strong class="text-4xl font-bold text-slate-50">500+</strong>
+        <figcaption class="mt-2 text-gray-100">Clientes Satisfechos</figcaption>
+      </figure>
+      <figure class="scroll-revealed">
+        <strong class="text-4xl font-bold text-slate-50">1000+</strong>
+        <figcaption class="mt-2 text-gray-100">Problemas Resueltos</figcaption>
+      </figure>
+      <figure class="scroll-revealed">
+        <strong class="text-4xl font-bold text-slate-50">24/7</strong>
+        <figcaption class="mt-2 text-gray-100">Soporte Disponible</figcaption>
+      </figure>
+      <figure class="scroll-revealed">
+        <strong class="text-4xl font-bold text-slate-50">12+</strong>
+        <figcaption class="mt-2 font-bold text-slate-50">Años de Experiencia</figcaption>
+      </figure>
+    </article>
+  </section>
+</section>
+
+<!-- Nosotros -->
+<section id="contact" class="section-area bg-gray-50 dark:bg-gray-800">
+  <article class="container">
+    <header class="mx-auto max-w-[550px] text-center">
+      <h2 class="mb-8 text-indigo-700 dark:text-indigo-300">¿Necesitas Ayuda Técnica?</h2>
+      <p class="mb-8 text-slate-700 dark:text-slate-200">
+        Nuestro equipo de expertos está listo para ayudarte. Contáctanos ahora y obtén una solución
+        rápida a tus problemas técnicos.
+      </p>
+      <nav class="flex justify-center gap-4">
+        <a
+          href="#"
+          class="transform rounded-lg bg-indigo-600 px-8 py-3 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:bg-indigo-700"
+        >
+          Contactar Ahora
+        </a>
+      </nav>
+    </header>
+  </article>
+</section>
