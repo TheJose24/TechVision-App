@@ -48,7 +48,7 @@ export const routes: Routes = [
         component: ContactoComponent,
       },
       {
-        path: 'servicio-app',
+        path: 'app-moviles',
         component: ServicioAppComponent,
       },
       /*

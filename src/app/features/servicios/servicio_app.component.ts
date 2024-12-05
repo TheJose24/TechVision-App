@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
-// import required modules
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
-import './servicio.app.component.css';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 register();
