@@ -1,0 +1,164 @@
+/* Animación Fade-In para Secciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Hover en tarjetas */
+.hover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.hover-card img {
+  animation: bounce 1s ease infinite;
+}
+.scroll-revealed.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación para elementos que aparecen al hacer scroll */
+.scroll-revealed {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Animación para el hero section */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animación para las tarjetas de servicios */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.service-card {
+  animation: popIn 0.6s ease-out forwards;
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Animación para las estadísticas */
+@keyframes countUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.stat-item {
+  animation: countUp 0.8s ease-out forwards;
+}
+
+/* Animaciones por sección */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.section-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animaciones específicas por tipo de sección */
+.slide-left {
+  transform: translateX(-100px);
+}
+
+.slide-right {
+  transform: translateX(100px);
+}
+
+.scale-up {
+  transform: scale(0.8);
+}
+
+.fade-up {
+  transform: translateY(30px);
+}
+/* Agrega este CSS a tu archivo de estilos */
+.animated-background {
+  background: linear-gradient(270deg, #4a90e2, #9013fe);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

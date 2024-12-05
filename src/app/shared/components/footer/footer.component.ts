@@ -104,7 +104,6 @@ export class FooterComponent {
   ];
 
   companyLinks = [
-    { label: 'Agencia', path: '/agencia' },
     { label: 'Blog', path: '/blog' },
     { label: 'Contacto', path: '/contacto' },
   ];

@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "format": "prettier --write \"./src/**/*.{ts,json,html}\"",
     "prepare": "husky",
-    "optimize-images": "node scripts/optimize-images.js"
+    "optimize-images": "node scripts/optimize-images.js",
+    "swiper": "^8.4.7"
   },
   "private": true,
   "dependencies": {

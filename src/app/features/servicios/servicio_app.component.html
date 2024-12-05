@@ -1,0 +1,391 @@
+<main class="main relative">
+  <section
+    class="py-16 dark:bg-gray-900"
+    @fadeInOut
+    appScrollReveal
+    [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+  >
+    <div class="container mx-auto px-4">
+      <div
+        class="mx-auto grid max-w-6xl items-center justify-center gap-12 md:grid-cols-2 md:gap-24"
+      >
+        <!-- Columna de Texto -->
+        <div class="flex flex-col space-y-6 text-center md:text-left">
+          <!-- Título -->
+          <h2 class="text-4xl font-bold leading-tight text-blue-400">APLICACIONES MÓVILES</h2>
+          <!-- Subtítulo -->
+          <p class="text-primary-500 text-xl font-semibold">
+            Impulsa tu marca con una App que deslumbre en tecnología y conquiste a tus usuarios
+          </p>
+          <!-- Imagen en pantallas pequeñas -->
+          <img
+            src="../../../assets/img/services_app/mov_app.png"
+            alt="Desarrollo de Aplicaciones Móviles"
+            class="mx-auto mb-6 block w-3/4 max-w-[300px] rounded-lg object-cover shadow-md md:hidden"
+          />
+          <!-- Descripción -->
+          <p class="text-justify text-lg leading-relaxed text-gray-300">
+            Desarrollamos aplicaciones móviles de alto rendimiento para iOS, Android y plataformas
+            nativas. Nuestro enfoque combina diseño visual atractivo con funcionalidad intuitiva,
+            creando soluciones digitales que elevan la presencia de tu marca.
+          </p>
+          <!-- Botón -->
+          <div class="flex justify-center md:justify-start">
+            <button
+              type="button"
+              class="border-primary-500 text-primary-500 hover:bg-primary-50 rounded-md border px-6 py-3 text-center text-lg font-semibold transition-colors"
+            >
+              Más Información
+            </button>
+          </div>
+        </div>
+        <!-- Columna de Imagen -->
+        <div class="hidden items-center justify-center md:flex">
+          <div class="relative w-3/4">
+            <img
+              src="../../../assets/img/services_app/mov_app.png"
+              alt="Desarrollo de Aplicaciones Móviles"
+              class="w-full transform rounded-lg shadow-lg transition-transform duration-300 hover:scale-110"
+            />
+            <div class="bg-primary-500/20 absolute inset-0 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="py-16 dark:bg-gray-900"
+    @fadeInOut
+    appScrollReveal
+    [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+  >
+    <!-- Título Principal -->
+    <h1 class="mb-8 text-center text-4xl font-bold text-blue-400">
+      Sistemas Operativos Multiplataforma
+    </h1>
+
+    <!-- Carrusel -->
+    <section class="relative py-12">
+      <article class="container mx-auto text-center">
+        <section class="relative overflow-hidden rounded-lg shadow-lg">
+          <!-- Slides -->
+          <article id="carousel-slides" class="flex transition-transform duration-700 ease-in-out">
+            <!-- Slide 1: Android -->
+            <section
+              class="flex h-[400px] min-w-full items-center"
+              style="
+                background-image: url('../../../assets/img/services_app/androidapp2.jpg');
+                background-position: center;
+                background-size: cover;
+              "
+            >
+              <!-- Contenedor para imagen -->
+              <figure class="flex w-1/2 justify-center">
+                <img
+                  src="../../../assets/img/services_app/android.png"
+                  alt="Logo Android"
+                  class="h-48 w-auto"
+                />
+              </figure>
+              <!-- Contenedor para texto -->
+              <section class="w-1/2 px-8 text-left">
+                <h2
+                  class="font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl"
+                  style="text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8)"
+                >
+                  Android
+                </h2>
+                <p
+                  class="mt-4 text-white sm:text-lg lg:text-xl"
+                  style="text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8)"
+                >
+                  El sistema operativo más usado del mundo, ideal para dispositivos móviles y
+                  tablets.
+                </p>
+              </section>
+            </section>
+
+            <!-- Slide 2: iOS -->
+            <section
+              class="flex h-[400px] min-w-full items-center"
+              style="
+                background-image: url('../../../assets/img/services_app/ios.movil.jpg');
+                background-position: center;
+                background-size: cover;
+              "
+            >
+              <!-- Contenedor para imagen -->
+              <figure class="flex w-1/2 justify-center">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/179/179309.png"
+                  alt="Logo iOS"
+                  class="h-48 w-auto"
+                />
+              </figure>
+              <!-- Contenedor para texto -->
+              <section class="w-1/2 px-8 text-left">
+                <h2
+                  class="font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl"
+                  style="text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8)"
+                >
+                  iOS
+                </h2>
+                <p
+                  class="mt-4 text-white sm:text-lg lg:text-xl"
+                  style="text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8)"
+                >
+                  La experiencia más fluida para dispositivos Apple, con un diseño exclusivo y
+                  rendimiento sobresaliente.
+                </p>
+              </section>
+            </section>
+
+            <!-- Slide 3: Windows -->
+            <section
+              class="flex h-[400px] min-w-full items-center"
+              style="
+                background-image: url('../../../assets/img/services_app/windowapp.jpg');
+                background-position: center;
+                background-size: cover;
+              "
+            >
+              <!-- Contenedor para imagen -->
+              <figure class="flex w-1/2 justify-center">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/732/732221.png"
+                  alt="Logo Windows"
+                  class="h-48 w-auto"
+                />
+              </figure>
+              <!-- Contenedor para texto -->
+              <section class="w-1/2 px-8 text-left">
+                <h2
+                  class="font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl"
+                  style="text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8)"
+                >
+                  Windows
+                </h2>
+                <p
+                  class="mt-4 text-white sm:text-lg lg:text-xl"
+                  style="text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8)"
+                >
+                  Potente y versátil, utilizado en ordenadores personales y dispositivos
+                  profesionales.
+                </p>
+              </section>
+            </section>
+          </article>
+
+          <!-- Indicadores -->
+          <section class="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-3">
+            <button
+              class="h-4 w-4 rounded-full bg-white opacity-50 transition-opacity hover:opacity-100"
+              data-slide="0"
+              type="button"
+              aria-label="Go to slide 1"
+            ></button>
+            <button
+              class="h-4 w-4 rounded-full bg-white opacity-50 transition-opacity hover:opacity-100"
+              data-slide="1"
+              type="button"
+              aria-label="Go to slide 2"
+            ></button>
+            <button
+              class="h-4 w-4 rounded-full bg-white opacity-50 transition-opacity hover:opacity-100"
+              data-slide="2"
+              type="button"
+              aria-label="Go to slide 3"
+            ></button>
+          </section>
+        </section>
+      </article>
+    </section>
+  </section>
+
+  <section
+    class="py-16 dark:bg-gray-900"
+    @fadeInOut
+    appScrollReveal
+    [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+  >
+    <div class="container mx-auto px-4">
+      <h2 class="mb-12 text-center text-4xl font-bold text-blue-600">
+        CARACTERÍSTICAS DE LA APLICACIÓN
+      </h2>
+      <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Tarjeta 1 -->
+        <div
+          class="mx-auto max-w-xs transform rounded-lg bg-blue-100 shadow-lg transition-transform hover:scale-105 hover:bg-blue-300 hover:shadow-xl"
+        >
+          <div class="p-6 text-center">
+            <div class="mb-4">
+              <img
+                src="../../../assets/img/services_app/notification_app.png"
+                alt="Mensajes Promocionales"
+                class="w-30 mx-auto h-32"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-600">Mensajes promocionales</h3>
+            <p class="mt-2 text-gray-600">
+              Enviar notificaciones a los clientes a través de su aplicación móvil.
+            </p>
+          </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div
+          class="mx-auto max-w-xs transform rounded-lg bg-blue-100 shadow-lg transition-transform hover:scale-105 hover:bg-blue-300 hover:shadow-xl"
+        >
+          <div class="p-6 text-center">
+            <div class="mb-4">
+              <img
+                src="../../../assets/img/services_app/payments_app.png"
+                alt="Pagos Móviles"
+                class="w-30 mx-auto h-32"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-600">Pagos móviles</h3>
+            <p class="mt-2 text-gray-600">
+              Acepta pagos con Visa, MasterCard y American Express en tu aplicación.
+            </p>
+          </div>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div
+          class="mx-auto max-w-xs transform rounded-lg bg-blue-100 shadow-lg transition-transform hover:scale-105 hover:bg-blue-300 hover:shadow-xl"
+        >
+          <div class="p-6 text-center">
+            <div class="mb-4">
+              <img
+                src="../../../assets/img/services_app/analistyc_app.png"
+                alt="Analítica Mejorada"
+                class="w-30 mx-auto h-32"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-600">Analítica mejorada</h3>
+            <p class="mt-2 text-gray-600">
+              Obtenga análisis e informes detallados en su panel de SPW.
+            </p>
+          </div>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div
+          class="mx-auto max-w-xs transform rounded-lg bg-blue-100 shadow-lg transition-transform hover:scale-105 hover:bg-blue-300 hover:shadow-xl"
+        >
+          <div class="p-6 text-center">
+            <div class="mb-4">
+              <img
+                src="../../../assets/img/services_app/accesible_app.png"
+                alt="Accesible"
+                class="w-30 mx-auto h-32"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-blue-600">Accesible</h3>
+            <p class="mt-2 text-gray-600">Una interfaz de usuario intuitiva y fácil de usar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="py-16 dark:bg-gray-900"
+    @fadeInOut
+    appScrollReveal
+    [scrollRevealConfig]="{ origin: 'top', delay: 200 }"
+  >
+    <div class="container mx-auto grid grid-cols-1 gap-8 px-10 md:grid-cols-2">
+      <!-- Tarjeta 1 -->
+      <article
+        class="group relative isolate flex transform flex-col justify-end overflow-hidden rounded-2xl px-8 pb-5 pt-60 transition-all duration-500 hover:rotate-1 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          src="../../../assets/img/services_app/analista.jpg"
+          alt="Mensajería en la aplicación"
+          class="absolute inset-0 h-full w-full object-cover filter transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        ></div>
+        <h3
+          class="z-10 mt-3 translate-y-10 transform text-3xl font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          Mensajería en la aplicación
+        </h3>
+        <div
+          class="z-10 translate-y-20 transform text-sm leading-6 text-gray-300 opacity-0 transition-all delay-100 duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          Haz notar tus anuncios
+        </div>
+      </article>
+      <!-- Tarjeta 2 -->
+      <article
+        class="group relative isolate flex transform flex-col justify-end overflow-hidden rounded-2xl px-8 pb-5 pt-60 transition-all duration-500 hover:rotate-1 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          src="../../../assets/img/services_app/movil2.jpg"
+          alt="Nativo"
+          class="absolute inset-0 h-full w-full object-cover filter transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        ></div>
+        <h3
+          class="z-10 mt-3 translate-y-10 transform text-3xl font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          Nativo
+        </h3>
+        <div
+          class="z-10 translate-y-20 transform text-sm leading-6 text-gray-300 opacity-0 transition-all delay-100 duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          Desarrollo de aplicaciones nativas
+        </div>
+      </article>
+      <!-- Tarjeta 3 -->
+      <article
+        class="group relative isolate flex transform flex-col justify-end overflow-hidden rounded-2xl px-8 pb-5 pt-60 transition-all duration-500 hover:rotate-1 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          src="../../../assets/img/services_app/movil3.jpg"
+          alt="De confianza"
+          class="absolute inset-0 h-full w-full object-cover filter transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        ></div>
+        <h3
+          class="z-10 mt-3 translate-y-10 transform text-3xl font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          De confianza
+        </h3>
+        <div
+          class="z-10 translate-y-20 transform text-sm leading-6 text-gray-300 opacity-0 transition-all delay-100 duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          Garantizamos flexibilidad
+        </div>
+      </article>
+      <!-- Tarjeta 4 -->
+      <article
+        class="group relative isolate flex transform flex-col justify-end overflow-hidden rounded-2xl px-8 pb-5 pt-60 transition-all duration-500 hover:rotate-1 hover:scale-105 hover:shadow-2xl"
+      >
+        <img
+          src="../../../assets/img/services_app/movil4.jpg"
+          alt="Plataforma Agnóstica"
+          class="absolute inset-0 h-full w-full object-cover filter transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        ></div>
+        <h3
+          class="z-10 mt-3 translate-y-10 transform text-3xl font-bold text-white opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          Plataforma Agnóstica
+        </h3>
+        <div
+          class="z-10 translate-y-20 transform text-sm leading-6 text-gray-300 opacity-0 transition-all delay-100 duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          Compatibilidad total para cualquier dispositivo.
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
